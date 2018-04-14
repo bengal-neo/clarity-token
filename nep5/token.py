@@ -4,9 +4,9 @@ from boa.interop.Neo.Storage import *
 from boa.builtins import concat
 
 
-NAME = 'Gincoin'
+NAME = 'Clarity'
 
-SYMBOL = 'GIN'
+SYMBOL = 'CLA'
 
 DECIMALS = 8
 
@@ -42,7 +42,6 @@ def handle_token(ctx, operation, args):
 
     elif operation == 'totalSupply':
         return Get(ctx, TOTAL_SUPPLY_KEY)
-
 
     elif operation == 'transfer':
         if len(args) == 3:

@@ -37,7 +37,10 @@ def Main(operation, args):
             if operation == op:
                 return handle_token(ctx, operation, args)
 
-        if operation == 'deploy':
+        if operation == 'register':
+            return register(ctx, get_asset_attachments())
+
+        elif operation == 'deploy':
             return deploy()
 
         elif operation == 'buyTokens':
@@ -47,6 +50,13 @@ def Main(operation, args):
             return available_amount(ctx)
 
         return 'unknown operation'
+
+
+# register account which company or user
+def register(ctx, attachments):
+    print(ctx)
+    print(attachments)
+
 
 
 def deploy():
